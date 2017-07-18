@@ -11,7 +11,7 @@
 
 Rails.application.routes.draw do
   api_version(module: 'API/V1', path: { value: '/api/v1' }) do
-    resources :users
+    mount_devise_token_auth_for 'User', at: 'auth'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

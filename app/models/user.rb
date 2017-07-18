@@ -34,8 +34,10 @@
 #  index_users_on_uid_and_provider      (uid,provider) UNIQUE
 #
 
-FactoryGirl.define do
-  factory :user do
-    
-  end
+class User < ActiveRecord::Base
+  # Include default devise modules.
+  devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :trackable, :validatable,
+          :confirmable, :omniauthable
+  include DeviseTokenAuth::Concerns::User
 end
