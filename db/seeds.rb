@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 1.times do |n|
   User.create(
-    email: "linhtalinhtinh_1994@yahoo.com.vn",
+    email: "leminh050994@gmail.com",
     password: '12345678',
     name: "name #{n}",
     nickname: "nickname #{n}"
